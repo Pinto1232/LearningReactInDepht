@@ -1,6 +1,7 @@
 import './App.css';
 import Car from './components/Car';
 import NewCar from './components/NewCar/NewCar';
+import NewPerson from './components/NewPerson/NewPerson';
 import Person from './components/Person';
 
 
@@ -84,12 +85,19 @@ function App() {
     console.log(Car)
   }
 
+  const addPersonHandler = Person => {
+    console.log('In App 2')
+    console.log(Person)
+  }
+
 
 
   return (
     <div className="App">
 
         <NewCar onAddcar={addCarHandler} />
+
+        <NewPerson onAddPerson={addPersonHandler}/>
 
 
 
