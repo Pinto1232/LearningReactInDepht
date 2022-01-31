@@ -37,7 +37,9 @@ function App() {
 
   return (
     <div className="App">
-           <NewCar onAddcar={addCarHandler} />
+
+        <NewCar onAddcar={addCarHandler} />
+        
         <Car 
            name = {carDetail[0].name}
            maker = {carDetail[0].maker}
