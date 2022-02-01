@@ -1,6 +1,7 @@
 import './App.css';
 import Car from './components/Car';
 import NewCar from './components/NewCar/NewCar';
+import NewHouse from './components/NewHouse/NewHouse';
 import NewPerson from './components/NewPerson/NewPerson';
 import Person from './components/Person';
 
@@ -77,7 +78,35 @@ function App() {
       nationality: 'Angolan',
       profession: 'Student'
     }
-  ]
+  ];
+
+  
+  const HouseDetails = [
+    {
+      id: 0,
+      location: 'Cape Town',
+      address: 'Dorchester Drive',
+      availability: 'available',
+      size: '26 meter square'
+    },
+    {
+      id: 1,
+      location: 'Cape Town',
+      address: 'Corchester Drive',
+      availability: 'available',
+      size: '26 meter square'
+    },
+    {
+      id: 2,
+      location: 'Cape Town',
+      address: 'Oxford',
+      availability: 'not available',
+      size: '126 meter square'
+    }
+  ];
+  
+  
+  
 
 
   const addCarHandler = Car => {
@@ -91,13 +120,12 @@ function App() {
   }
 
 
-
   return (
     <div className="App">
 
         <NewCar onAddcar={addCarHandler} />
-
         <NewPerson onAddPerson={addPersonHandler}/>
+        <NewHouse />
 
 
 
