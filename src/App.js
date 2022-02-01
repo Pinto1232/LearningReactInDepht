@@ -120,6 +120,14 @@ function App() {
   }
 
 
+  const addHouseHandler = House => {
+    console.log('In App 3')
+    console.log(House);
+  }
+
+ 
+
+
   return (
     <div className="App">
 
