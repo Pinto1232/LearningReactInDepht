@@ -1,9 +1,9 @@
 import './App.css';
 import Car from './components/Car';
 import NewCar from './components/NewCar/NewCar';
-import NewHouse from './components/NewHouse/NewHouse';
 import NewPerson from './components/NewPerson/NewPerson';
 import Person from './components/Person';
+
 
 
 function App() {
@@ -80,63 +80,67 @@ function App() {
     }
   ];
 
+
+  // const HouseDetails = [
+  //   {
+  //     id: 0,
+  //     province: 'Western cape - Cape Town',
+  //     address: 'Dorchester drive',
+  //     available: 'Yes',
+  //     size: '126 metersquare'
+  //   },
+  //   {
+  //     id: 1,
+  //     province: 'Western cape - Cape Town',
+  //     address: 'Wst beatch drive',
+  //     available: 'Yes',
+  //     size: '126 metersquare'
+  //   },
+  //   {
+  //     id: 2,
+  //     province: 'Western cape - Cape Town',
+  //     address: 'Blouberg drive',
+  //     available: 'Yes',
+  //     size: '126 metersquare'
+  //   },
+  //   {
+  //     id: 3,
+  //     province: 'Western cape - Cape Town',
+  //     address: 'corchester drive',
+  //     available: 'Yes',
+  //     size: '126 metersquare'
+  //   }
+  // ];
+
   
-  const HouseDetails = [
-    {
-      id: 0,
-      location: 'Cape Town',
-      address: 'Dorchester Drive',
-      availability: 'available',
-      size: '26 meter square'
-    },
-    {
-      id: 1,
-      location: 'Cape Town',
-      address: 'Corchester Drive',
-      availability: 'available',
-      size: '26 meter square'
-    },
-    {
-      id: 2,
-      location: 'Cape Town',
-      address: 'Oxford',
-      availability: 'not available',
-      size: '126 meter square'
-    }
-  ];
-  
+ 
   
   
 
 
-  const addCarHandler = Car => {
+  const addCarHandler = (Car: any) => {
     console.log('In app');
     console.log(Car)
   }
 
-  const addPersonHandler = Person => {
+  const addPersonHandler = (Person: any) => {
     console.log('In App 2')
     console.log(Person)
   }
 
 
-  const addHouseHandler = House => {
-    console.log('In App 3')
-    console.log(House);
-  }
-
- 
+  // const addHouseHandler = House => {
+  //   console.log('In App 3');
+  //   console.log(House)
+  // }
 
 
   return (
     <div className="App">
 
         <NewCar onAddcar={addCarHandler} />
-        <NewPerson onAddPerson={addPersonHandler}/>
-        <NewHouse />
-
-
-
+        {/* <NewPerson onAddPerson={addPersonHandler}/> */}
+        
         <Person
             name = {personDetail[0].name}
             surname = {personDetail[0].surname}
@@ -176,8 +180,6 @@ function App() {
             nationality = {personDetail[4].nationality}
             profession = {personDetail[4].profession}
         />
-
-
 
 
         {/**Displaying the car array **/}

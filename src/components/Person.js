@@ -19,7 +19,6 @@ const Person = (props) => {
         console.log(nationality)
         setProfession('Updated')
         console.log(profession)
-
     }
 
     return (
