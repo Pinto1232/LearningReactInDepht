@@ -113,11 +113,6 @@ function App() {
   // ];
 
   
- 
-  
-  
-
-
   const addCarHandler = (Car: any) => {
     console.log('In app');
     console.log(Car)
@@ -139,8 +134,8 @@ function App() {
     <div className="App">
 
         <NewCar onAddcar={addCarHandler} />
-        {/* <NewPerson onAddPerson={addPersonHandler}/> */}
-        
+        <NewPerson onAddPerson={addPersonHandler}/>
+      
         <Person
             name = {personDetail[0].name}
             surname = {personDetail[0].surname}
