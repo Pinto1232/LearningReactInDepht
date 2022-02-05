@@ -1,20 +1,51 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ExpenseForm.css'
 
 
 const ExpenseForm = () => {
+    /* Managing more then one state */
+    /* const [title, setTitle] = useState('')
+    const [amount, setAmount] = useState('')
+    const [date, setDate] = useState('') */
+
+    /* One state with different value in one state object */
+   const [userInput, setUserInput] = useState({
+        title: '',
+        amount: '',
+        date: ''
+    })
 
 
-    const titleChangeHandler = (event) => {
-           console.log(event.target.value)
-    }
+    const titleChangeHandler = (event)  => {
+        /* setTitle(event.target.value) */
+
+        setUserInput({
+            ...userInput,
+            title: event.target.value
+        })
+        console.log(userInput);
+        
+    };
 
     const amountChangeHandler = (event) => {
-            console.log(event.target.value)
+        /* setAmount(event.target.value) */
+        setUserInput({
+            ...userInput,
+            amount: event.target.value
+        })
+        console.log(userInput);
+        
     }
 
-    const dateChangeHandler = () => {
+    const dateChangeHandler = (event) => {
+        /* setDate(event.target.value) */
 
+        setUserInput({
+            ...userInput,
+            date: event.target.value
+        })
+        console.log(userInput);
+        
     }
 
 
@@ -48,7 +79,10 @@ const ExpenseForm = () => {
                 <div className='new-expense__controls'>
                     <div className='new-expense__control'>
                         <label>Date</label>
-                        <input type="date"  min='2019-01-01' max='2022-12-31' />
+                        <input type="date"  min='2019-01-01' max='2022-12-31'
+                           onChange={dateChangeHandler} 
+                        
+                        />
                     </div>
                 </div>
 
