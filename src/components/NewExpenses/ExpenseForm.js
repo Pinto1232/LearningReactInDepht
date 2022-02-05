@@ -4,51 +4,77 @@ import './ExpenseForm.css'
 
 const ExpenseForm = () => {
     /* Managing more then one state */
-    /* const [title, setTitle] = useState('')
+    const [title, setTitle] = useState('')
     const [amount, setAmount] = useState('')
-    const [date, setDate] = useState('') */
+    const [date, setDate] = useState('')
 
     /* One state with different value in one state object */
-   const [userInput, setUserInput] = useState({
+    /*  const [userInput, setUserInput] = useState({
         title: '',
         amount: '',
         date: ''
-    })
+    }) */
 
 
     const titleChangeHandler = (event)  => {
-        /* setTitle(event.target.value) */
+        setTitle(event.target.value)
+        console.log(title);
+        
 
-        setUserInput({
+
+
+      /*   setUserInput({
             ...userInput,
             title: event.target.value
         })
-        console.log(userInput);
+        console.log(userInput); */
+      /* Best way to update the prev state */
+      /*  setUserInput((prevState) => {
+            return {
+                ...prevState,
+                title: event.target.value
+            } 
+        })
+        console.log(userInput); */
         
     };
 
     const amountChangeHandler = (event) => {
-        /* setAmount(event.target.value) */
-        setUserInput({
+        setAmount(event.target.value)
+
+
+       /*  setUserInput({
             ...userInput,
             amount: event.target.value
         })
-        console.log(userInput);
+        console.log(userInput); */
+      /*   setUserInput((prevState) => {
+            return {
+                ...prevState,
+                amount: event.target.value
+            }
+        })
+        console.log(userInput); */
+        
         
     }
 
     const dateChangeHandler = (event) => {
-        /* setDate(event.target.value) */
+        setDate(event.target.value)
 
-        setUserInput({
+        /* setUserInput({
             ...userInput,
             date: event.target.value
         })
-        console.log(userInput);
-        
+        console.log(userInput); */
+        /* setUserInput((prevState) => {
+            return {
+                ...prevState,
+                date: event.target.value
+            }
+        })
+        console.log(userInput); */  
     }
-
-
 
 
 
