@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './ExpenseForm.css'
 
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     /* Managing more then one state */
     const [title, setTitle] = useState('')
     const [amount, setAmount] = useState('')
@@ -84,7 +84,8 @@ const ExpenseForm = () => {
             enteredAmount: amount,
             enteredDate: new Date(date)
         };
-        console.log(expenseData);
+        /* console.log(expenseData); */
+        props.onSaveExpenseData(expenseData);
         /* Set the state to it initial state */
         setTitle('');
         setAmount('');
