@@ -21,6 +21,7 @@ const NewExpense = () => {
             {/* Passing a function inside of the ExpenseForm component
             to be called in the app parent component */}
 
+            {/* Passing the onSaveExpenseData in the ExpenseForm component to be extrated */}
            <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}/>
         </div>
     );
