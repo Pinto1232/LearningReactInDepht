@@ -85,7 +85,7 @@ const ExpenseForm = (props) => {
             enteredDate: new Date(date)
         };
         /* console.log(expenseData); */
-        props.onSaveExpenseData();
+        props.onSaveExpenseData(expenseData);
         /* Set the state to it initial state */
         setTitle('');
         setAmount('');
