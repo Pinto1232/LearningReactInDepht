@@ -16,11 +16,10 @@ const ExpenseForm = () => {
     }) */
 
 
-    const titleChangeHandler = (event)  => {
+    const titleChangeHandler = (event)  => { 
         setTitle(event.target.value)
-        console.log(title);
-
-      /*   setUserInput({
+        /* console.log(title);*/
+        /*   setUserInput({
             ...userInput,
             title: event.target.value
         })
