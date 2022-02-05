@@ -19,9 +19,6 @@ const ExpenseForm = () => {
     const titleChangeHandler = (event)  => {
         setTitle(event.target.value)
         console.log(title);
-        
-
-
 
       /*   setUserInput({
             ...userInput,
@@ -76,10 +73,25 @@ const ExpenseForm = () => {
         console.log(userInput); */  
     }
 
+    /* Creating a function to handle the form on submit */
+    const submitHandler = (event) => {
+        /* If the request was not sent the page will not reload */
+        event.preventDefault()
+
+
+        /* Combine the proprieties */
+        const expenseData = {
+            enteredTitle: title,
+            enteredAmount: amount,
+            enteredDate: new Date(date)
+        };
+        console.log(expenseData);
+    }
+
 
 
     return (
-            <form>
+            <form onSubmit={submitHandler}>
                 <h2>Expenform Data Capture</h2>
                 <div className='new-expense__controls'>
                     <div className='new-expense__control'>
