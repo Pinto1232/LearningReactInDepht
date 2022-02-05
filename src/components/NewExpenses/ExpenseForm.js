@@ -19,9 +19,18 @@ const ExpenseForm = () => {
     const titleChangeHandler = (event)  => {
         /* setTitle(event.target.value) */
 
-        setUserInput({
+      /*   setUserInput({
             ...userInput,
             title: event.target.value
+        })
+        console.log(userInput); */
+
+        /* Best way to update the prev state */
+        setUserInput((prevState) => {
+            return {
+                ...prevState,
+                title: event.target.value
+            } 
         })
         console.log(userInput);
         
@@ -29,22 +38,40 @@ const ExpenseForm = () => {
 
     const amountChangeHandler = (event) => {
         /* setAmount(event.target.value) */
-        setUserInput({
+       /*  setUserInput({
             ...userInput,
             amount: event.target.value
         })
+        console.log(userInput); */
+
+        setUserInput((prevState) => {
+            return {
+                ...prevState,
+                amount: event.target.value
+            }
+        })
         console.log(userInput);
+        
         
     }
 
     const dateChangeHandler = (event) => {
         /* setDate(event.target.value) */
 
-        setUserInput({
+        /* setUserInput({
             ...userInput,
             date: event.target.value
         })
+        console.log(userInput); */
+
+        setUserInput((prevState) => {
+            return {
+                ...prevState,
+                date: event.target.value
+            }
+        })
         console.log(userInput);
+        
         
     }
 
