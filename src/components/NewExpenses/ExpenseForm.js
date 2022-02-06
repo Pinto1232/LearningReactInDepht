@@ -18,12 +18,14 @@ const ExpenseForm = (props) => {
 
     const titleChangeHandler = (event)  => { 
         setTitle(event.target.value)
+        
         /* console.log(title);*/
         /*   setUserInput({
             ...userInput,
             title: event.target.value
         })
         console.log(userInput); */
+
       /* Best way to update the prev state */
       /*  setUserInput((prevState) => {
             return {
@@ -51,7 +53,6 @@ const ExpenseForm = (props) => {
             }
         })
         console.log(userInput); */
-        
         
     }
 
