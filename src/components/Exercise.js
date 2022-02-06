@@ -13,10 +13,10 @@ const Exercise = (props) => {
 
     return (
         <div className='exercise-item'>
-            <h2 className='exercise-title__item'>{props.title}</h2>
+            <p className='exercise-title__item'>{props.title}</p>
             <div>
                 <div className='exercise-subject__item'>{props.subject}</div>
-                <button onClick={exerciseHandler}>Add Subject</button>
+                {/* <button onClick={exerciseHandler}>Add Subject</button> */}
             </div>
         </div>
     );

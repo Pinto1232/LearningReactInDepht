@@ -1,6 +1,7 @@
 import './App.css';
 import Exercise from './components/Exercise';
 import ExpensesItem from './components/ExpensesItem';
+import NewExercise from './components/NewExercise/NewExercise';
 import NewExpense from './components/NewExpenses/NewExpense';
 
 
@@ -31,7 +32,7 @@ const expenses = [
   }
 ];
 
-/* const exercises = [
+const exercises = [
   {
     id: 0,
     title: 'Linear Equation',
@@ -42,7 +43,13 @@ const expenses = [
     title: 'Introductio to API', 
     subject: 'Programming'
   }
-] */
+] 
+
+
+const addExpenseHandler = expense =>{
+   console.log('In App.js');
+   console.log(expense);
+}
 
 
 function App() {
@@ -50,8 +57,9 @@ function App() {
   return (
     <div className="App">
       {/* New expense component */}
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
 
+    
 
       <ExpensesItem 
          title = {expenses[0].title}
@@ -76,9 +84,11 @@ function App() {
          price = {expenses[3].price}
          date = {expenses[3].date}
       />
-
-
-     {/*  <Exercise 
+   
+      {/* New Exercise component */}
+      <NewExercise />
+      
+     <Exercise 
         title = {exercises[0].title}
         subject = {exercises[0].subject}
       />
@@ -86,7 +96,7 @@ function App() {
       <Exercise 
         title = {exercises[1].title}
         subject = {exercises[1].subject}
-      /> */}
+      /> 
     </div>
   );
 }
