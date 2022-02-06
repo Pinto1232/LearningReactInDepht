@@ -52,6 +52,14 @@ const addExpenseHandler = expense =>{
 }
 
 
+const addExerciseHandler = (exercise) => {
+  console.log('In App 2');
+  console.log(exercise);
+  
+  
+}
+
+
 function App() {
 
   return (
@@ -86,7 +94,7 @@ function App() {
       />
    
       {/* New Exercise component */}
-      <NewExercise />
+      <NewExercise onAddExercise={addExerciseHandler} />
       
      <Exercise 
         title = {exercises[0].title}

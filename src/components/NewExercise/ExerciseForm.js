@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './ExerciseForm.css'
 
-const ExerciseForm = () => {
+const ExerciseForm = (props) => {
    const [enteredTitle, setEnteredTitle] =  useState('')
    const [enteredSubject, setEnteredSubject] =  useState('')
 
@@ -21,7 +21,8 @@ const ExerciseForm = () => {
                title: enteredTitle,
                subject: enteredSubject
             }
-            console.log(exerciseData);
+           /*  console.log(exerciseData); */
+           props.onSaveExerciseData(exerciseData)
 
             /* Biding the values */
             setEnteredTitle('')
