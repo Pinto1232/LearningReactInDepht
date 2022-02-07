@@ -38,11 +38,18 @@ const App = () => {
   };
 
 
+  const filterOutHandler = selectedYear =>{
+    setExpenses(expenses =>{
+      return expenses.filter(expense =>expense.date ==selectedYear ); 
+    } );
+  }
+
+
 
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={expenses} />
+      <Expenses onFilterChange = {filterOutHandler} items = {expenses}></Expenses>
     </div>
   );
 }
