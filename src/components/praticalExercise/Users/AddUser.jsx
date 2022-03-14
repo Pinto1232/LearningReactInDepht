@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from '../../praticalExercise/Users/AddUser.module.css';
+import Button from '../UI-Pratical/Button';
 import PraticalCard from '../UI-Pratical/PraticalCard';
 
 const AddUser = () =>
@@ -16,7 +17,7 @@ const AddUser = () =>
                 <input type="text" id="username" name="username" />
                 <label htmlFor="age">Age (Years)</label>
                 <input type="number" id="age" />
-                <button type="submit">Add User</button>
+                <Button type="submit" className={classes.button}>Add User</Button>
            </form>
         </PraticalCard>
     );
