@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 
 import NewExpense from './components/NewExpenses/NewExpenses';
 import Expenses from './components/Expenses/Expenses';
+import {Routes, Route} from 'react-router-dom'
+import {AddUser} from './exports/Exports'
+
+
 
 const DUMMY_EXPENSES = [
   {
@@ -38,8 +42,11 @@ const App = () => {
 
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={expenses} />
+      <Routes>
+        <Route path='/adduser' element={<AddUser />} />
+      </Routes>
+        {/*  <NewExpense onAddExpense={addExpenseHandler} />
+          <Expenses items={expenses} /> */}
     </div>
   );
 };
