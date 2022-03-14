@@ -4,6 +4,7 @@ import NewExpense from './components/NewExpenses/NewExpenses';
 import Expenses from './components/Expenses/Expenses';
 import {Routes, Route} from 'react-router-dom'
 import {AddUser} from './exports/Exports'
+import UserList from './components/praticalExercise/addUserList/UserList';
 
 
 
@@ -31,6 +32,7 @@ const DUMMY_EXPENSES = [
 
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  const [usersList, setUsersList] = useState([])
 
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
@@ -38,15 +40,26 @@ const App = () => {
     });
   };
 
+
+  const addUserHandler = (userName, userAge) =>
+  { 
+    setUsersList((prevUserList) =>
+    {
+       return [...prevUserList, {name: userName, age: userAge, id: Math.random().toString()}]
+     })
+  }
+
  
 
   return (
     <div>
+      
       <Routes>
-        <Route path='/adduser' element={<AddUser />} />
+        <Route path='/adduser' element={<AddUser onAddUser={addUserHandler} />} />
       </Routes>
         {/*  <NewExpense onAddExpense={addExpenseHandler} />
           <Expenses items={expenses} /> */}
+        <UserList users={usersList} />
     </div>
   );
 };
